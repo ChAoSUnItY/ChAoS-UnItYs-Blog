@@ -31,15 +31,10 @@
 
     //TODO Get my own scp page's data
     window.onload = function () {
-      $.ajax({
-        url: "http://zh.xjo.ch/api?user=ok",
-        dataType: 'jsonp',  //data type必須設定成 'jsonp'
-        crossDomain: true,
-        data: data,
-        success: function (data, status) {
-          alert(data);
-        }
-      });
+      yAxis.push("first");
+      yAxis.push("second");
+      datas.push(Math.floor(Math.random() * 100) + 1);
+      datas.push(Math.floor(Math.random() * 100) + 1);
     }
 
     function appendData() {
@@ -58,7 +53,4 @@
       //更新線圖
       lineChart.update();
     }
-
-    //每秒做一次
-    setInterval(appendData, 1000);
   </script>
