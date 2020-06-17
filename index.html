@@ -1,28 +1,103 @@
+<!DOCTYPE html>
+<!--本頁面由ChAoS UnItY自行製作，適用MIT。-->
 <html>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+<head>
+<title>ChAoS UnItY的個人網站</title>
+</head>
 <body>
-  <button id="button">Click me!</button>
-  <p id="output"></p>
+<h1>ChAoS UnItY的個人網站</h1>
+<hr>
+<div class="list" style="text-align:left;">
+<h3>目錄</h3>
+<dl>
+  <dt>Stations Mod教學</dt>
+  	<dd><a href="">CurseForge頁面</a></dd>
+  	<dd><a href="">1.7.10</a></dd>
+  	<dd><a href="">1.12.2</a></dd>
+  <dt>Eki Mod教學</dt>
+  	<dd><a href="https://www.curseforge.com/minecraft/mc-mods/eki-mod">CurseForge頁面</a></dd>
+  	<dd><a href="">1.12.2 / 1.10.2 / 1.7.10</a></dd>
+</dl>
+</div>
+<hr>
+<div class="introduction">
+	<h2>關於我</h2>
+	<div class="introduction1">
+		一個業餘編程玩家，主要開發Minecraft模組以及部分網頁。
+	</div>
+	<div class="langList">
+	<div class="a">
+		<b>  Java  </b>
+	</div>
+	<div class="b">
+		<b>  C#  </b>
+	</div>
+	<div class="c">
+		<b>  JavaScript  </b>
+	</div>
+	<div class="d">
+		<b>  Node.js  </b>
+	</div>
+	</div>
+</div>
+<hr>
+<div class="contents">
+<a href="https://www.curseforge.com/minecraft/mc-mods/eki-mod"><img class="eki" src=" https://media.forgecdn.net/avatars/thumbnails/251/359/64/64/637183172463428524.png"></a>
+</div>
 </body>
-<script>
-  $("#button").click(function () {
-    $.ajax({
-        type: 'POST',
-        url: "https://cors-anywhere.herokuapp.com/http://scp-zh-tr.wikidot.com/chaos-unitys-analysis-scrapper",
-        data: { keyword: "jack" },
-        dataType: "jsonp",
-        contentType: 'application/json',
-        success: function (result) {
-            alert($(result).find('#page-content > table > tbody > tr:nth-child(2) > th:nth-child(2) > div > p'));
-        },
-        error: function (xhr, textStatus, thrownError) {
-            alert(textStatus);
-        }
-    });
-});
-</script>
-
+</div>
+<style type="text/css">
+	body {
+		background: black;
+		color:white;
+		text-align:center;
+	}
+	div.list {
+		background-color:teal;
+		border:5px DodgerBlue double;
+		text-align:left;
+		width:250px;
+	}
+	div.introduction1 {
+		text-align:left;
+	}
+	.langList .contents{
+		text-align:left;
+		border: 1px solid black;
+		width: auto;
+    	overflow: auto;
+	}
+	.a, .b , .c, .d{
+    transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	display: inline-block;
+	border: 4px solid white;
+    font-size: 15px;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 10px 15px;
+    padding:10px;
+	}
+    .a:hover, .b:hover, .c:hover, .d:hover {
+    transform: scale(1.5);
+    display: inline-block;
+	border: 4px solid white;
+    background-color: black;
+    font-size: 15px;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 10px 15px;
+    padding:10px;
+    }
+    .eki {
+    transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+    display:inline-block;
+    width:10%;
+    border: 3px solid white;
+    }
+    .eki:hover {
+    display:inline-block;
+    transform: scale(1.5);
+    border: 3px solid #ff6666;
+    }
+</style>
 </html>
